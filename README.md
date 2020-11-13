@@ -62,7 +62,7 @@ Estrutura de pastas criada pelo grupo<br/>
 <br/><br/>
 
 Diagrama de classe criada pelo grupo<br/>
-![Diagrama de classe criada pelo grupo](imgs/diagrama-classe-final.PNG)
+![Diagrama de classe criada pelo grupo](imgs/diagrama-classe-final.png)
 
 Para nossa implementação estudamos alguns tutoriais voltado para Java com Spring Boot, segue referencias.
  - https://blog.usejournal.com/create-a-rest-api-in-spring-boot-with-mysql-b250ff3aaa9b
