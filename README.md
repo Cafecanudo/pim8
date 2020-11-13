@@ -49,7 +49,7 @@ O mecanismo de acesso ao banco de dados que sua equipe deve desenvolver deve seg
   
 ### Diagrama de base de dados
 Para modelar o banco de dados proposto usamos [Mysql Workbench](https://www.mysql.com/products/workbench/) para modelar os dados e também usamos o [Mysql Community server](https://dev.mysql.com/) na versão 8.0 como nossa base de dados, sua versão gratuita. Segue resultado com Mysql Workbench.
-![](imgs/diagrama-dados-final.PNG)
+<br/>![](imgs/diagrama-dados-final.PNG)
 
 Os arquivo do Workbench para estudos está dentro da pasta `^resources/diagrama-de-dados.mwb` deste mesmo repositório Git.
 ### Diagrama de classes.
@@ -58,15 +58,45 @@ Os codigo dos projeto foi desenvolvido usando a linguagem de programacao Java e 
 Segue nossa estrutura de organização de pastas e diagrama de classe criado no **IntelliJ Community IDEA**
 
 Estrutura de pastas criada pelo grupo<br/>
-![Estrutura de pastas criada pelo grupo](imgs/estrutura-pastas.PNG)
-<br/><br/>
+![](imgs/estrutura-pastas.PNG)
+
 
 Diagrama de classe criada pelo grupo<br/>
-![Diagrama de classe criada pelo grupo](imgs/diagrama-classe-final.png)
+![](imgs/diagrama-classe-final.PNG)
+
 
 Para nossa implementação estudamos alguns tutoriais voltado para Java com Spring Boot, segue referencias.
- - https://blog.usejournal.com/create-a-rest-api-in-spring-boot-with-mysql-b250ff3aaa9b
- - https://www.baeldung.com/java-connect-mysql
- - http://zetcode.com/springboot/mysql/
+https://blog.usejournal.com/create-a-rest-api-in-spring-boot-with-mysql-b250ff3aaa9b
+https://www.baeldung.com/java-connect-mysql
+http://zetcode.com/springboot/mysql/
+
+### Acessos aos serviços
+Nossa equipe/grupo desenvolveu alguns recursos para que outras equipes de desenvolvedores possam acessar nossa base de dados, disponibilizamos alguns serviços no padrão [RestFul](https://dzone.com/articles/a-look-at-rest-api-design-patterns). Segue as URLs para acesso.
+
+ - **Para consultar Pessoas cadastradas na base de dados**
+	<br/>**METODO GET** http://localhost:8080/pessoa
+    	 <br/>*A URL retorna uma string no [formato JSON](https://www.json.org/json-pt.html)* igual a imagem abaixo.
+    	 <br/>![](imgs/json-all.PNG)
+	 
+ - Para consultar uma pessoa usando seu ID
+	<br/>**METODO GET** http://localhost:8080/pessoa/NUMERO_ID
+		<br/>*A URL retorna uma string no [formato JSON](https://www.json.org/json-pt.html)* igual a imagem abaixo.
+    	 <br/>![](imgs/json-all.PNG)
+
+ - Para consultar uma pessoa usando seu CPF
+	<br/>**METODO GET** http://localhost:8080/pessoa/cpf/NUMERO_DE_CPF
+		<br/>*A URL retorna uma string no [formato JSON](https://www.json.org/json-pt.html)* igual a imagem abaixo.
+    	 <br/>![](imgs/json-all.PNG)
+
+ - Para criar/cadastrar uma nova pessoa
+	<br/>**METODO POST** http://localhost:8080/pessoa
+	<br/>O corpo da solicitação deve ter o seguinte formato
+	<br/>![](imgs/corpo-post.PNG)
+		<br/>*A URL retorna uma string no [formato JSON](https://www.json.org/json-pt.html)* igual a imagem abaixo.
+    	 <br/>![](imgs/json-all.PNG)
+
+- Para excluir uma pessoa
+	<br/>**METODO DELETE** http://localhost:8080/pessoa/NUMERO_ID
+		<br/>*A URL retorna nada.
 
 ## Protótipos de telas
